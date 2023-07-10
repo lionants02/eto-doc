@@ -27,6 +27,31 @@ toc: true
 
 ## ระบบ api
 // TODO
-<div>
+<!-- <div>
 <iframe src="/eto-doc/openapi-1.html" title="ETO api"></iframe>
+</div> -->
+
+<div>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui.min.css">
+      <title>ETO api</title>
+
+  <body>
+      <div id="openapi">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui-bundle.min.js"></script>
+          <script>
+              window.onload = function () {
+                  const ui = SwaggerUIBundle({
+                      url: "/eto-doc/assets/openapi/vitual-1.json",
+                      dom_id: "#openapi"
+                  })
+              }
+          </script>
+  </body>
 </div>
