@@ -4,6 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
+  overlay_image: /assets/img/banner.png
   actions:
     - label: "<i class='fa fa-file-text-o'></i> ภาพรวมระบบ"
       url: "/docs/quick-guide/"
@@ -46,3 +47,6 @@ excerpt: >
         
   </pre>
 </div>
+
+![อุปกรณ์ ETO](/assets/img/eto-device.png)
+![web api](/assets/img/eto-web-api.png)
