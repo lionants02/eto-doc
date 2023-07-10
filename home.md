@@ -31,8 +31,21 @@ excerpt: >
             12 lead ecg
             ::icon(fa fa-heartbeat)
 
-        System monitor
+        Software
             Network monitor
             Gateway monitor
+            Vital sign api
+
+        Panel Pc/Tablet
+        ::icon(fa fa-tablet)
+            Mic
+            ::icon(fa fa-microphone)
+            Speaker
+            ::icon(fa fa-volume-up)
+            Software
+                D1669 Medinfo
+
+        Wifi Hotspot
+        ::icon(fa fa-wifi)
   </pre>
 </div>
