@@ -29,6 +29,8 @@ logo                     : # path of logo image to display in the masthead, e.g.
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
+head_scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.4/mermaid.min.js
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -101,10 +103,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Thanchai Thongkum"
+  name             : "ETO name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "**amazing**."
+  location         : "Bangkok/Thailand"
   email            :
   links:
     - label: "Email"
