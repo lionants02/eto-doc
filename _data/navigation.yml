@@ -1,0 +1,7 @@
+main:
+  - title: "Quick-Guide"
+    url: /docs/quick-guide/
+  - title: "About"
+    url: /about/
+  - title: "เนื้อหาทั้งหมด"
+    url: /collection-archive/
