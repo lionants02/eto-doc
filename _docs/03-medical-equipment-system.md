@@ -27,7 +27,9 @@ toc: true
 
 ## ระบบ api
 // TODO
-<div align="center" id="openapi">
+<div id="openapi">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui-bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui.min.css">
   <script>
     window.onload = function () {
       const ui = SwaggerUIBundle({

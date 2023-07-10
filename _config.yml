@@ -31,8 +31,8 @@ masthead_title           : # overrides the website title displayed in the masthe
 words_per_minute         : 200
 head_scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.2.4/mermaid.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui-bundle.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui.min.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui.min.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui-bundle.min.js
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
