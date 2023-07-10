@@ -27,24 +27,6 @@ toc: true
 
 ## ระบบ api
 // TODO
-<div id="openapi">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui-bundle.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.1.0/swagger-ui.min.css">
-  <script>
-    const ui = SwaggerUIBundle({
-      url: "/eto-doc/assets/openapi/vitual-1.json",
-      dom_id: '#openapi',
-      presets: [
-        SwaggerUIBundle.presets.apis,
-        SwaggerUIBundle.SwaggerUIStandalonePreset
-      ],
-      // layout: "StandaloneLayout"
-  })
-    // window.onload = function () {
-    //   const ui = SwaggerUIBundle({
-    //     url: "/eto-doc/assets/openapi/vitual-1.json",
-    //     dom_id: "#openapi"
-    //   })
-    // }
-  </script>
+<div>
+<iframe src="/eto-doc/openapi-1.html" title="ETO api"></iframe>
 </div>
