@@ -3,7 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  image: /eto-doc/assets/img/banner.png
+  image: /assets/img/banner.png
 ---
 <div align="center">
   <pre class="mermaid">
