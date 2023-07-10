@@ -7,7 +7,7 @@
     },
     "servers": [
         {
-            "url": "https://api.server.test/v1"
+            "url": "https://vender-brocker/v1"
         }
     ],
     "externalDocs": {"url": "https://build.fhir.org/ig/HL7/cimi-vital-signs/Observation-BloodPressurePanel-example.json.html"},
@@ -187,7 +187,8 @@
                                             "example":"mm[Hg]",
                                             "default":"mm[Hg]"
                                         }
-                                    }
+                                    },
+                                    "required": ["value"]
                                 }
                             }
                         },
@@ -233,7 +234,8 @@
                     "resourceType",
                     "id",
                     "effectiveDateTime",
-                    "device"
+                    "device",
+                    "component"
                 ]
             }
         }
@@ -241,11 +243,21 @@
     "paths": {
         "/Observation/BloodPressurePanel": {
             "get": {
-                "description": "",
+                "description": "ดูข้อมูล BloodPressure จาก vender broker",
                 "parameters": [],
                 "responses": {
                     "200": {
-                        "description": "OK"
+                        "description": "ข้อมูล BloodPressure",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "array",
+                                    "items":{
+                                        "$ref": "#/components/schemas/BloodPressure"
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
