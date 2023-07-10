@@ -1,6 +1,12 @@
 main:
   - title: "Quick-Guide"
     url: /docs/quick-guide/
+  - title: "ระบบภาพภายในรถ"
+    url: /docs/video-system/
+  - title: "การเชื่อมอุปกรณ์การแพทย์"
+    url: /docs/medical-equipment-system/
+  - title: "อุปกรณ์ Panel PC"
+    url: /docs/panel-pc/
   - title: "About"
     url: /about/
   - title: "เนื้อหาทั้งหมด"
