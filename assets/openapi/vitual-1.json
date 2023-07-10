@@ -244,6 +244,7 @@
         "/Observation/BloodPressurePanel": {
             "get": {
                 "description": "ดูข้อมูล BloodPressure จาก vender broker",
+                "summary": "ข้อมูลวัดความดัน",
                 "parameters": [],
                 "responses": {
                     "200": {
