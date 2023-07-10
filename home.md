@@ -3,8 +3,7 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  overlay_color: "#5e616c"
-  overlay_image: /eto-doc/assets/img/banner.png
+  image: /eto-doc/assets/img/banner.png
 ---
 <div align="center">
   <pre class="mermaid">
