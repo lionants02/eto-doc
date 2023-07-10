@@ -18,7 +18,11 @@ permalink: /openapi-1.html
             window.onload = function () {
                 const ui = SwaggerUIBundle({
                     url: "/eto-doc/assets/openapi/vitual-1.json",
-                    dom_id: "#openapi"
+                    dom_id: "#openapi",
+                    presets: [
+                        SwaggerUIBundle.presets.apis,
+                        SwaggerUIBundle.SwaggerUIStandalonePreset
+                    ],
                 })
             }
         </script>
