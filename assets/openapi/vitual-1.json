@@ -1,0 +1,254 @@
+{
+    "openapi": "3.0.3",
+    
+    "info": {
+        "title": "ETO Brocker Vital sign",
+        "version": "alpha-1"
+    },
+    "servers": [
+        {
+            "url": "https://api.server.test/v1"
+        }
+    ],
+    "externalDocs": {"url": "https://build.fhir.org/ig/HL7/cimi-vital-signs/Observation-BloodPressurePanel-example.json.html"},
+    "components": {
+        "schemas": {
+            "BloodPressure": {
+                "type": "object",
+                "description": "ข้อมูลความดันโลหิต",
+                "properties": {
+                    "resourceType": {
+                        "type": "string",
+                        "description": "ค่าคงที่",
+                        "enum": [
+                            "Observation"
+                        ],
+                        "example": "Observation"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "ค่าคงที่",
+                        "enum": [
+                            "BloodPressure"
+                        ],
+                        "example": "BloodPressure"
+                    },
+                    "code":{
+                        "type": "object",
+                        "description": "ระบุรหัสอ้างอิงเกี่ยวกับการวัดความดัน หากไม่ระบุจะเป็นค่า default เป็นค่าวัดสากลโดยทัวไป",
+                        "properties": {
+                            "coding":{
+                                "type": "array",
+                                "description": "รายละเอียดเกี่ยวกับหน่วยการวัด",
+                                "items":{
+                                    "type": "object",
+                                    "properties": {
+                                        "system":{
+                                            "type": "string",
+                                            "default":"http://loinc.org",
+                                            "example":"http://loinc.org"
+                                        },
+                                        "code":{
+                                            "type": "string",
+                                            "default":"85354-9",
+                                            "example":"85354-9"
+                                        },
+                                        "display":{
+                                            "type": "string",
+                                            "example":"Blood pressure panel with all children optional"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "subject":{
+                        "type": "object",
+                        "properties": {
+                            "display":{
+                                "type": "string",
+                                "example":"Small Child1234"
+                            }
+                        }
+                    },
+                    "effectiveDateTime":{
+                        "type": "string",
+                        "description": "วันที่และเวลาที่วัด",
+                        "example":"2019-10-16T12:12:29-09:00"
+                    },
+                    "issued":{
+                        "type": "string",
+                        "description": "ส่งออกข้อมูลเมื่อ อาจจะใช้เป็น วันที่และเวลาตอนที่มีการเรียก api หากไม่ระบุ จะใช้ วันที่และเวลาปัจจุบัน",
+                        "example":"2019-10-16T12:12:29-10:00"
+                    },
+                    "performer":{
+                        "type": "object",
+                        "description": "เจ้าหน้าที่ หรือ ผู้ที่ทำการวัด ไม่จำเป็นต้องระบุก็ได้",
+                        "properties": {
+                            "display":{
+                                "type": "string",
+                                "example" :"A. Pediatrician6"
+                            }
+                        }
+                    },
+                    "bodySite":{
+                        "type": "object",
+                        "description": "เกี่ยวกับจุดที่ทำการวัด ไม่ต้องระบุก็ได้ จะใช้ค่า default เป็นบริเวณแขนข้างซ้าย",
+                        "properties": {
+                            "coding":{
+                                "type": "array",
+                                "items":{
+                                    "type": "object",
+                                    "properties": {
+                                        "system":{
+                                            "type": "string",
+                                            "example":"http://snomed.info/sct",
+                                            "default":"http://snomed.info/sct"
+                                        },
+                                        "code":{
+                                            "type": "string",
+                                            "example":"723961002",
+                                            "default":"723961002"
+                                        },
+                                        "display":{
+                                            "type": "string",
+                                            "example":"Structure of left brachial artery (body structure)",
+                                            "default":"Structure of left brachial artery (body structure)"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "device":{
+                        "type": "object",
+                        "description": "ข้อมูลอุปกรณ์ ที่ใช้ในการวัด",
+                        "properties": {
+                            "reference":{
+                                "type": "string",
+                                "description": "อุปกรณ์ที่ใช้วัด",
+                                "example": "nihonkohden/SVM-7100/serialxxxxxxxx"
+                            }
+                        },
+                        "required": ["reference"]
+                    },
+                    "component":{
+                        "type": "array",
+                        "description": "ค่าข้อมูลการวัดที่ได้จากอุปกรณ์ สำหรับความดันในที่นี้ จะมี 2 ค่าตัวบน/ตัวล่าง",
+                        "items":{
+                            "type": "object",
+                            "description": "ตัวข้อมูลของค่าที่วัด",
+                            "properties": {
+                                "code":{
+                                    "type": "object",
+                                    "properties": {
+                                        "coding":{
+                                            "type": "array",
+                                            "description": "รายละเอียดของการวัด อ้างอิงตามรหัส สำหรับความดัน 8480-6 ค่าค่าตัวบน และ 8462-4 คือค่าตัวล่าง",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "system":{
+                                                        "type": "string",
+                                                        "example":"http://loinc.org",
+                                                        "default":"http://loinc.org"
+                                                    },
+                                                    "code":{
+                                                        "type": "string",
+                                                        "description": "สำหรับความดัน 8480-6 ค่าค่าตัวบน และ 8462-4 คือค่าตัวล่าง",
+                                                        "example":"8480-6"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "valueQuantity":{
+                                    "type": "object",
+                                    "description": "ค่าที่วัด พร้อม หน่วยวัด",
+                                    "properties": {
+                                        "value":{
+                                            "type": "integer",
+                                            "example": 120
+                                        },
+                                        "unit":{
+                                            "type": "string",
+                                            "description": "หน่วยวัด",
+                                            "example":"mm[Hg]",
+                                            "default":"mm[Hg]"
+                                        },
+                                        "system":{
+                                            "type": "string",
+                                            "example":"http://unitsofmeasure.org",
+                                            "default":"http://unitsofmeasure.org"
+                                        },
+                                        "code":{
+                                            "type": "string",
+                                            "example":"mm[Hg]",
+                                            "default":"mm[Hg]"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "example": [
+                            {
+                                "code" : {
+                                  "coding" : [
+                                    {
+                                      "system" : "http://loinc.org",
+                                      "code" : "8480-6"
+                                    }
+                                  ]
+                                },
+                                "valueQuantity" : {
+                                  "value" : 120,
+                                  "unit" : "mm[Hg]",
+                                  "system" : "http://unitsofmeasure.org",
+                                  "code" : "mm[Hg]"
+                                }
+                              },
+                              {
+                                "code" : {
+                                  "coding" : [
+                                    {
+                                      "system" : "http://loinc.org",
+                                      "code" : "8462-4"
+                                    }
+                                  ]
+                                },
+                                "valueQuantity" : {
+                                  "value" : 80,
+                                  "unit" : "mm[Hg]",
+                                  "system" : "http://unitsofmeasure.org",
+                                  "code" : "mm[Hg]"
+                                }
+                              }
+                        ]
+                        
+                    }
+                    
+                },
+                "required": [
+                    "resourceType",
+                    "id",
+                    "effectiveDateTime",
+                    "device"
+                ]
+            }
+        }
+    },
+    "paths": {
+        "/Observation/BloodPressurePanel": {
+            "get": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}
