@@ -17,11 +17,11 @@ excerpt: >
         ระบบภาพภายในรถ
         ::icon(fa fa-ambulance)
             กล้อง<br/>ภาพรวม
-            ::icon(fa fa-video-camera)
+            ::icon(fa video-camera)
             กล้อง<br/>หน้าผู้ป่วย
-            ::icon(fa fa-video-camera)
+            ::icon(fa video-camera)
             Body camera<br/>ไร้สาย
-            ::icon(fa fa-video-camera)
+            ::icon(fa video-camera)
             ภาพจาก<br/>based site monitor
             ::icon(fa fa-heartbeat)
             
