@@ -12,6 +12,18 @@ toc: true
 
 ## หัวข้อแรก
 
+
+<div align="center">
+  <pre class="mermaid">
+    flowchart TD
+        A[Christmas] -->|Get money| B(Go shopping)
+        B --> C{Let me think}
+        C -->|One| D[Laptop]
+        C -->|Two| E[iPhone]
+        C -->|Three| F[fa:fa-car Car]
+  </pre>
+</div>
+
 ```mermaid
 flowchart TD
     A[Christmas] -->|Get money| B(Go shopping)
