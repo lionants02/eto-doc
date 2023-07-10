@@ -1,5 +1,5 @@
 ---
-title: "Start Guide"
+title: "Quick Guide"
 permalink: /docs/quick-guide/
 excerpt: "ทำความเข้าใจอย่างรวดเร็ว"
 last_modified_at: 2023-07-10T08:48:05-04:00
