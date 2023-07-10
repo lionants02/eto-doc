@@ -5,7 +5,7 @@ hidden: true
 header:
   overlay_color: "#5e616c"
   actions:
-    - label: "<i class='fa-thin fa-page'></i> ภาพรวมระบบ"
+    - label: "<i class='fa fa-file-text-o'></i> ภาพรวมระบบ"
       url: "/docs/quick-guide/"
 excerpt: >
   ETO เป็นสื่อกลางในการเชื่อมโยงระบบข้อมูลการแพทย์บนพาหนะ ทางบก หรือ ทางอาศ เพื่อให้บริการอื่นเชื่อมต่อผ่านระบบ api ที่ใช้มาตฐานเดียวกัน
@@ -17,11 +17,11 @@ excerpt: >
         ระบบภาพภายในรถ
         ::icon(fa fa-ambulance)
             กล้อง<br/>ภาพรวม
-            ::icon(fa video-camera)
+            ::icon(fa fa-camera)
             กล้อง<br/>หน้าผู้ป่วย
-            ::icon(fa video-camera)
+            ::icon(fa fa-camera)
             Body camera<br/>ไร้สาย
-            ::icon(fa video-camera)
+            ::icon(fa fa-camera)
             ภาพจาก<br/>based site monitor
             ::icon(fa fa-heartbeat)
             
