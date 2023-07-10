@@ -38,7 +38,7 @@ toc: true
         SwaggerUIBundle.presets.apis,
         SwaggerUIBundle.SwaggerUIStandalonePreset
       ],
-      layout: "StandaloneLayout"
+      // layout: "StandaloneLayout"
   })
     // window.onload = function () {
     //   const ui = SwaggerUIBundle({
