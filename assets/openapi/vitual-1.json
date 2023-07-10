@@ -7,6 +7,9 @@
     },
     "servers": [
         {
+            "url": "http://vender-brocker/v1"
+        },
+        {
             "url": "https://vender-brocker/v1"
         }
     ],
