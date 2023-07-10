@@ -4,12 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/img/banner.png
-  actions:
-    - label: "<i class='fa fa-file-text-o'></i> ภาพรวมระบบ"
-      url: "/docs/quick-guide/"
-excerpt: >
-  ETO เป็นสื่อกลางในการเชื่อมโยงระบบข้อมูลการแพทย์บนพาหนะ ทางบก หรือ ทางอาศ เพื่อให้บริการอื่นเชื่อมต่อผ่านระบบ api ที่ใช้มาตฐานเดียวกัน
+  overlay_image: /eto-doc/assets/img/banner.png
 ---
 <div align="center">
   <pre class="mermaid">
@@ -48,5 +43,5 @@ excerpt: >
   </pre>
 </div>
 
-![อุปกรณ์ ETO](/assets/img/eto-device.png)
-![web api](/assets/img/eto-web-api.png)
+![อุปกรณ์ ETO](/eto-doc/assets/img/eto-device.png)
+![web api](/eto-doc/assets/img/eto-web-api.png)
